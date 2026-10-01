@@ -1,5 +1,8 @@
+#Functions
 def p(*x):
   print(str(x))
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 game_name = "Text Adventure"
 user_name = ""
 choice = ""
@@ -25,6 +28,7 @@ def run_game():
   print("You wake up, early in the morning. The birds are singing, and you think it's just a normal day.")\
   print("You go out to check the mail.")
   print("You find one unnamed envelope, which is probably just a bunch of bills.")
+  print("You walk inside and close the door.")
   print("Do you open it now, or do you open it after breakfast? Breakfast/Now")
   choice = input().lower()
   if choice == "breakfast":
@@ -32,5 +36,8 @@ def run_game():
     print("The life's substance. Coffee.")
     print("30 minutes later.")
     print("Ok, lets check that mail!")
-  print("It's in the hall.")
+    print("It's in the hall.")
+    print("You walk to the hall.")
+  print("Opening...")
+  
 run_game()
